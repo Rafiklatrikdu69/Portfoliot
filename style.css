@@ -1,45 +1,43 @@
 body{
     margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: row;
 } 
  
- ul li a {
-    text-decoration: none;
-   
-  }
-ul{
-    list-style-type: none;
-}
-.nav-bar ul{
-background-color: aliceblue;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-width: 100px;
-}
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
 
-  li a:hover {
-    background-color: blue;
-  }
-aside{
-    height: auto;
-    width: 100px;
-}
+  
+
 article{
     position: absolute;
     left: 100vh;
 }
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+
+.container-menu{
+
+ 
+    
+    
+}
+.container-menu { display: flex; 
+    flex-direction: 
+    column;
+    align-items: center; 
+    background-color: aliceblue;
+    position: fixed;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%; 
+} 
+      
+      
+.container-menu aside { 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-around; 
+        height: 100%; /* Adjust the height of the aside to fill the container */ } .container-menu aside div { background-color: #fff; padding: 20px; text-align: left; border: 1px solid #ddd; margin-bottom: 10px; 
+}
+.container-menu{
+    overflow: auto;
 }
