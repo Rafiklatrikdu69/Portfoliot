@@ -1,33 +1,41 @@
+*{
+    font-family: Futura,Trebuchet MS,Arial;
+}
 body{
     margin: 0;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas:
+    "aside cont"
+    "aside  cont"
+    "foot foot"
+    ;
+    gap: 5px;
+    
 } 
  
-
+body > .container-menu{
+    grid-area: aside;
+}
+body > .container{
+    grid-area: cont;
+}
+body > .footer{
+    grid-area: foot;
+}
   
 
-article{
-    position: absolute;
-    left: 100vh;
-}
 
-.container-menu{
 
- 
-    
-    
-}
-.container-menu { display: flex; 
+.container-menu {
+     display: flex; 
     flex-direction: 
     column;
     align-items: center; 
     background-color: aliceblue;
-    position: fixed;
+    
     padding: 5px;
-    top: 0;
-    left: 0;
-    width: 25%;
+   
+   
     height: 100%; 
 } 
       
@@ -36,8 +44,29 @@ article{
         display: flex; 
         flex-direction: column; 
         justify-content: space-around; 
+       
         height: 100%; /* Adjust the height of the aside to fill the container */ } .container-menu aside div { background-color: #fff; padding: 20px; text-align: left; border: 1px solid #ddd; margin-bottom: 10px; 
 }
 .container-menu{
+    width: 50%;
     overflow: auto;
 }
+ .footer{
+   
+ 
+  width: 100%;
+  background-color: red;
+  color: white;
+  height: 100px;
+  text-align: center;
+ }
+ .container{
+    width: auto;
+    /* background-color: aqua; */
+    
+ }
+ img {
+    width: 80px;
+  height: 100px;
+  border-radius: 50%;
+  }
