@@ -43,15 +43,14 @@ body > .footer{
 
 
 .container-menu {
+    
      display: flex; 
     flex-direction: 
     column;
     align-items: center; 
-    background-color: aliceblue;
+    background-color: rgb(82, 101, 117);
     
     padding: 5px;
-   
-   
     height: 100%; 
 } 
       
@@ -61,10 +60,16 @@ body > .footer{
         flex-direction: column; 
         justify-content: space-around; 
        
-        height: 100%; /* Adjust the height of the aside to fill the container */ } .container-menu aside div { background-color: #fff; padding: 20px; text-align: left; border: 1px solid #ddd; margin-bottom: 10px; 
+        height: 100%; /* Adjust the height of the aside to fill the container */ }
+         .container-menu aside div { 
+            background-color: #fff; 
+            padding: 20px; 
+            text-align: left; 
+            border: 1px solid #ddd;
+             margin-bottom: 10px; 
 }
 .container-menu{
-    width: 40%;
+    width: 30%;
     overflow: auto;
 }
  .footer{
@@ -91,11 +96,16 @@ body > .footer{
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: aqua;
-    height: 100vh;
-    text-align: center;
+    height: 30vh;
+    /* background-color: aqua; */
+    align-items: center;
+   
     
   }
+  .flex-js div{
+    margin-top: 0;
+  }
+  
   .text-container{
     width: 100%;
   }
@@ -132,8 +142,8 @@ body > .footer{
     animation-iteration-count: 1;
 -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
--webkit-animation-duration: 2s;
-    animation-duration: 2s;
+-webkit-animation-duration: 1s;
+    animation-duration: 1s;
   }
 
 
@@ -142,13 +152,18 @@ body > .footer{
     width: 300px;
     border-style: solid;
     display: flex;
-    flex-direction: row;
-
+    flex-direction: row-reverse;
+    border-radius: 8px;
+   
+    /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+  }
+  .form-div-content:hover{
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   }
 
   .form-div-content-second{
     width: auto;
-    border-style: solid;
+    /* border-style: solid; */
     display: flex;
     flex-direction: row;
     height: 350px;
@@ -197,6 +212,8 @@ body > .footer{
     position: relative;
     transform-style: preserve-3d;
     transition: transform 1s;
+    display: flex;
+   margin: 20px;
 }
 
 .card:hover {
@@ -204,3 +221,49 @@ body > .footer{
     transform: rotateY(180deg);
 }
 
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .wave {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 30%;
+    vertical-align: middle;
+    overflow: hidden;
+    border-style: solid;
+  }
+  .arrow {
+    background-color: black;
+    height: 0.1em;
+    width: 1.5em;
+    margin-right: 1em;
+    position: absolute;
+    top: 80%;
+    transition: all 0.2s;
+    transform: rotate(90deg);
+    cursor: pointer; /* Ajoutez ceci pour indiquer que la flèche est cliquable */
+}
+
+.arrow::before, .arrow::after {
+    position: absolute;
+    content: "";
+    background-color: black;
+    height: 0.1em;
+    width: 0.6em;
+    right: 0;
+    top: 0;
+}
+
+.arrow::before {
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+.arrow::after {
+    transform: rotate(-45deg);
+    transform-origin: right top;
+}

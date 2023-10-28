@@ -20,3 +20,9 @@ function afficherTexteSequentiel() {
 window.addEventListener("load", afficherTexteSequentiel);
 
 // Ajoutez un gestionnaire d'événements pour le bouton "Lire la suite".
+let fleche = document.getElementsByClassName('arrow');
+function linkSection(){
+    console.log("quoicoubeh");
+    location.href = "#section1";
+}
+fleche[0].addEventListener('click', linkSection);
