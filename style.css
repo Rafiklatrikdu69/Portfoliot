@@ -178,6 +178,7 @@ body > .footer{
     position: absolute;
     top: 0;
     text-align: center;
+    
 }
 .front {
     
@@ -199,5 +200,7 @@ body > .footer{
 }
 
 .card:hover {
+  
     transform: rotateY(180deg);
 }
+
