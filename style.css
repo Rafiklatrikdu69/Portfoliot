@@ -61,7 +61,7 @@ body > .footer{
         height: 100%; /* Adjust the height of the aside to fill the container */ } .container-menu aside div { background-color: #fff; padding: 20px; text-align: left; border: 1px solid #ddd; margin-bottom: 10px; 
 }
 .container-menu{
-    width: 50%;
+    width: 40%;
     overflow: auto;
 }
  .footer{
@@ -100,6 +100,8 @@ body > .footer{
     height: 100vh;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    gap: 10%;
     /* transform: translateX(-100vh); */
   }
   @-webkit-keyframes fadeInOpacity {
@@ -129,4 +131,56 @@ body > .footer{
     animation-timing-function: ease-in;
 -webkit-animation-duration: 2s;
     animation-duration: 2s;
+  }
+
+
+  .form-div-content{
+   
+    width: 300px;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .form-div-content-second{
+    width: auto;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+  }
+  .form-div-content-p:first-child{
+    background-color: red;
+    color: white;
+  }
+  .form-div-content-p .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    
+  }
+  .back{
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    
+  }
+  
+  .card{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    
+
+  }
+  .card:hover{
+    transform: rotateY(180deg);
   }
