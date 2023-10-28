@@ -2,13 +2,16 @@
     font-family: Futura,Trebuchet MS,Arial;
 }
 body{
-    display: flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             
             margin: 0;
             flex-direction: column;
           
+  }
+  body > div{
+    text-align: center;
   }
 /* body{
     margin: 0;
@@ -148,39 +151,53 @@ body > .footer{
     border-style: solid;
     display: flex;
     flex-direction: row;
+    height: 350px;
   }
-  .form-div-content-p:first-child{
-    background-color: red;
-    color: white;
-  }
-  .form-div-content-p .back{
-    width: 100%;
-    height: 100%;
+  .front, .back {
+   
+    width: 100%; /* Ajustez la largeur pour qu'elle corresponde à celle de la div parent */
+    height: 100%; /* Ajustez la hauteur pour qu'elle corresponde à celle de la div parent */
     position: absolute;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 12px;
     color: white;
-    
-  }
-  .back{
-    background-color: black;
-    color: white;
+}
+
+.back {
+    margin-left: -50px;
+    margin-top: 50px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 10px;
     transform: rotateY(180deg);
+}
+.back p:first-child {
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+.front {
     
-  }
-  
-  .card{
+    margin-top: 50px;
+  margin-left: 50px;
+    background-color: aliceblue;
+    
+    border-radius: 10px;
+    transform: rotateY(0deg);
+   
+}
+.card {
+    
     width: 200px;
-    height: 300px;
+    height: 200px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.5s;
-    
+    transition: transform 1s;
+}
 
-  }
-  .card:hover{
+.card:hover {
     transform: rotateY(180deg);
-  }
+}
